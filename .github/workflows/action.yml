@@ -22,7 +22,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.HOST_DNS }}
           REMOTE_USER: ${{ secrets.USERNAME }}
           TARGET: ${{ secrets.TARGET_DIR }}
-          ARGS: "-rltgoDzvO"
-          SOURCE: "/"
+#           ARGS: "-rltgoDzvO"
+#           SOURCE: "/"
       - name: Deploy Script 1    
         run: mkdir app-express
