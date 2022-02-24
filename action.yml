@@ -30,3 +30,6 @@ inputs:
 outputs:
   status:
     description: "Status"
+runs:
+  using: "node12"
+  
