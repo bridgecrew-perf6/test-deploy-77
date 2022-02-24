@@ -4,7 +4,7 @@ name: Push-to-EC2
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   deploy:
@@ -15,7 +15,7 @@ jobs:
       - name: Checkout the files
         uses: actions/checkout@v2
       - name: Deploy to Server 1
-        uses: sculpeydev/test-deploy@master
+        uses: sculpeydev/test-deploy@main
     
       
         
