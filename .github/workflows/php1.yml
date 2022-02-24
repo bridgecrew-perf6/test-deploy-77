@@ -12,8 +12,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the files
-        uses: actions/checkout@v1
+   #   - name: Checkout the files
+   #     uses: actions/checkout@v1
       - name: Deploy to Server 1
         uses: sculpeydev/test-deploy@main
     
