@@ -36,6 +36,6 @@ outputs:
     description: "Status"
 runs:
   using: "node12"
-  main: "dist/index.js"
+  main: "index.js"
 
   
