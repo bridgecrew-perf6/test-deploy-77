@@ -23,8 +23,7 @@ inputs:
     description: "Target directory"
     required: false
     default: "/home/REMOTE_USER/"
-  
-outputs:
+  outputs:
   status:
     description: "Status"
 runs:
