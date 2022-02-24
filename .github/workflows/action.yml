@@ -15,16 +15,30 @@ jobs:
 
       - name: Checkout the files
         uses: actions/checkout@v2
+      - name: Deployment
+        uses: appleboy/ssh-action@main
+
+        with:
+         host: ${{ secrets.SSH_HOST }}
+
+         key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+         username: ${{ secrets.SSH_USERNAME }}
+         script: |
+
+          cd /var/www/html/sculpey-magento
+          mkdir releases1
+
 #       - name: Deploy to Server 1
 #         uses: actions/checkout@v2
-      - name: Checkout the files
-        uses:  sculpeydev/test-deploy@main
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          REMOTE_HOST: ${{ secrets.HOST_DNS }}
-          REMOTE_USER: ${{ secrets.USERNAME }}
-          TARGET: ${{ secrets.TARGET_DIR }}
-#           ARGS: "-rltgoDzvO"
-#           SOURCE: "/"
-      - name: Deploy Script 1    
-        run: mkdir app-express
+#       - name: Checkout the files
+#         uses:  sculpeydev/test-deploy@main
+#         env:
+#           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+#           REMOTE_HOST: ${{ secrets.HOST_DNS }}
+#           REMOTE_USER: ${{ secrets.USERNAME }}
+#           TARGET: ${{ secrets.TARGET_DIR }}
+# #           ARGS: "-rltgoDzvO"
+# #           SOURCE: "/"
+#       - name: Deploy Script 1    
+#         run: mkdir app-express
