@@ -15,7 +15,7 @@ jobs:
       - name: Checkout the files
         uses: actions/checkout@main
       - name: Deploy to Server 1
-        uses: sculpeydev/test-deploy@main
+        uses: ./ .sculpeydev/test-deploy
     
       
         
