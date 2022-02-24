@@ -14,8 +14,8 @@ jobs:
     steps:
       - name: Checkout the files
         uses: actions/checkout@v1
-     # - name: Deploy to Server 1
-      #  uses: sculpeydev/test-deploy@main
+    
+      
         
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
@@ -24,3 +24,6 @@ jobs:
           TARGET: "/home/ubuntu/"
           script: |
             mkdir -p ~/my-express-app/
+            
+      - name: Deploy to Server 1
+        uses: sculpeydev/test-deploy@main
