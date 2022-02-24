@@ -14,17 +14,14 @@ jobs:
     steps:
       - name: Checkout the files
         uses: actions/checkout@v2
-#       - name: Deploy to Server 1
-#         uses: sculpeydev/test-deploy@main
-    
-      
-        
-#         env:
-#           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-#           REMOTE_HOST: "ec2-3-128-123-147.us-east-2.compute.amazonaws.com"
-#           REMOTE_USER: "ubuntu"
-#           TARGET: "/home/ubuntu/"
-#           script: |
-#             mkdir -p ~/my-express-app/
+      - name: Deploy to Server 1
+        uses: easingthemes/ssh-deploy@main    
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          REMOTE_HOST: "ec2-3-128-123-147.us-east-2.compute.amazonaws.com"
+          REMOTE_USER: "ubuntu"
+          TARGET: "/home/ubuntu/"
+          script: |
+            mkdir -p ~/my-express-app/
             
       
