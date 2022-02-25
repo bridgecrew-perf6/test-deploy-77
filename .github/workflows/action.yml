@@ -19,9 +19,8 @@ jobs:
         uses:  sculpeydev/test-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
-          REMOTE_HOST: "ec2-3-23-240-231.us-east-2.compute.amazonaws.com"
+          REMOTE_HOST: "ec2-3-128-123-147.us-east-2.compute.amazonaws.com"
           REMOTE_USER: ${{ secrets.USERNAME }}
-          REMOTE_PASS: "reHa>54n@0o^&@2021"
           TARGET: ${{ secrets.TARGET_DIR }}
       - name: Deploy Script 1    
         run: mkdir app-express
